@@ -28,12 +28,6 @@ This will run the gulp script that watches the '/src/icons' directory and render
   Don’t redraw or modify third-party logos in any way, unless you need to make it
   monochrome. Use the same icon for all the weights for third-party icons.
 
-- Use a 1920 by 1920 pixel artboard. The math to add margins relies on these
-  dimensions. It can be placed anywhere in the file, but it’s typically at 0.0.
-
-- For 100 weight icons, use a 96px grid and stroke. For 500 weight icons, use a
-  120px grid and stroke.
-
 - Using border radius is great, but sometimes the icon font doesn’t recognize
   them and you get hard edges. To get around this, you can join the
   shapes and flatten them. Sketch will draw the appropriate handles and bezier
@@ -51,8 +45,5 @@ This will run the gulp script that watches the '/src/icons' directory and render
 
 - Make sure none of the paths go outside of the artboard. If so, the
   glyph in the icon font will get misaligned. Draw inside the lines.
-
-- Fill the space edge-to-edge as much as possible. The build process will add
-  margins as needed.
 
 - All paths should be black (#000000).
