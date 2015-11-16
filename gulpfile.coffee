@@ -20,7 +20,7 @@ gulp.task 'font', ->
     .pipe svgmin
       plugins: svgoPluginOpts
     .pipe iconfont
-      fontName: "rmsicons"
+      fontName: "rms-icons"
       fixedWidth: true
       centerHorizontally: true
     .on 'codepoints', (codepoints, options) ->
@@ -33,8 +33,8 @@ gulp.task 'font', ->
       gulp
         .src './src/templates/icon-css-points.tmpl'
         .pipe consolidate 'lodash', templateData
-        .pipe rename 'icon-points.less'
-        .pipe gulp.dest "./build/fonts"
+        .pipe rename 'icon-points.styl'
+        .pipe gulp.dest "./build/css"
     .pipe gulp.dest "./build/fonts"
 
 gulp.task 'watch', ->

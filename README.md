@@ -9,11 +9,7 @@ _NOTE: Iconathon Light only works with OSX.
 
 First, you’ll need to…
 
-1. `brew install imagemagick` (version => `6.9.0-3`)
-2. `brew install graphicsmagick` (version => `1.3.20`)
-3. `brew install Caskroom/cask/xquartz`
-4. `brew install LibRSVG` (version => `2.36.3_1`)
-6. `npm install`
+- `npm install`
 
 Once you’ve got all the packages, run…
 
