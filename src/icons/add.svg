@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1920px" height="1920px" viewBox="0 0 1920 1920" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: sketchtool 3.4 (375) - http://www.bohemiancoding.com/sketch -->
+    <title>100/add</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="100/add" sketch:type="MSArtboardGroup" fill="#000000">
+            <path d="M1056,864 L1056,192.005346 C1056,138.984058 1013.01934,96 960,96 C906.983943,96 864,138.983057 864,192.005346 L864,864 L192.005346,864 C138.984058,864 96,906.980664 96,960 C96,1013.01606 138.983057,1056 192.005346,1056 L864,1056 L864,1727.99465 C864,1781.01594 906.980664,1824 960,1824 C1013.01606,1824 1056,1781.01694 1056,1727.99465 L1056,1056 L1727.99465,1056 C1781.01594,1056 1824,1013.01934 1824,960 C1824,906.983943 1781.01694,864 1727.99465,864 L1056,864 L1056,864 Z" id="Rectangle-9" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

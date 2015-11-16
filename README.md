@@ -1,15 +1,8 @@
-# Iconathon
+# Iconathon *Light*
 
-Iconathon is an icon task runner that turns Sketch files into icon formats for
-all various platforms. Iconathon will…
+Iconathon Light is an icon task runner that turns a directory of svg icons into an icon font.
 
-- Export to SVG for Android and the web, and PDF for iOS.
-- Allow for different weights, the thickness of the line in the icon.
-- Allow for different bounding boxes and margins.
-
-_NOTE: Iconathon only works with OSX and [Sketch](http://bohemiancoding.com/sketch/).
-Sorry! This is primarily an internal script that we use where we control the
-environment and software used._
+_NOTE: Iconathon Light only works with OSX.
 
 
 ## Set Up
@@ -20,58 +13,13 @@ First, you’ll need to…
 2. `brew install graphicsmagick` (version => `1.3.20`)
 3. `brew install Caskroom/cask/xquartz`
 4. `brew install LibRSVG` (version => `2.36.3_1`)
-5. install [sketchtool](http://bohemiancoding.com/sketch/tool/) (version => 1.4)
 6. `npm install`
 
 Once you’ve got all the packages, run…
 
-- `./tools/dev`
+- `./tools/build`
 
-This will run the gulp script, browserify for the testing app, and the testing
-app server. Visit [localhost:4004](http://localhost:4004) to see the icons in
-action. Look in `/build` for the output.
-
-
-## How It Works
-
-- The build script looks at the files in `/src/sketch`.
-
-- There’s an 1920x1920 artboard for each weight (100 and 500). The artboard is
-  the name (close, add, etc.) with a prefix of the weight, like
-  `100/close` and `500/close`.
-
-- When you save in Sketch with gulp running, the artboards will be exported in
-  SVG to the `/build/exports` directory automatically via `gulp-sketch`.
-
-- After exporting, gulp will take the file, resize, minify, and package it for
-  various platforms. You can see the result in `/build/<weight>`.
-
-
-## Adding and Modifying Icons
-
-…is easy!
-
-1. Make a new Sketch file in `/src/sketch/`.
-2. Make an 1920x1920 artboard for each weight (currently 100 and 500)
-3. Use underscores in the name of the file `business_class`. Use the same name
-   for artboards, but prefix with the weight, like `100/business_class` and
-   `500/business_class`.
-4. [Draw.](#tips-for-drawing)
-5. Save.
-
-Gulp will then handle the exporting, packaging, resizing, minifying and so on,
-so long as it’s running. _If you’re making a new icon, you may need to restart
-the dev script._ Commit, review, and push.
-
-To add another weight, add another artboard (named something like `700/foo`) to
-the individual Sketch files, then update the default and watch tasks at the
-bottom of the gulpfile.
-
-To add another size, update the sizes object following the same format. You’ll
-also need to update the default and watch tasks at the bottom of the gulpfile.
-
-We find the 100 weight is ideal for mobile devices, and 500 is ideal for the
-web. You can adapt your own naming conventions for weights.
+This will run the gulp script that watches the '/src/icons' directory and renders the icon font in the '/build/fonts' directory.
 
 
 ## Tips for Drawing
@@ -108,25 +56,3 @@ web. You can adapt your own naming conventions for weights.
   margins as needed.
 
 - All paths should be black (#000000).
-
-- [Test!](#testing)
-
-
-## Testing
-
-There’s a small web app for testing all the icons. You can see all the icons
-at once, in different sizes and formats.
-
-If you’re running the dev script, you’re already running the web app. Just
-visit [localhost:4004](http://localhost:4004). If you need to restart it,
-that’s done with `npm run dev`.
-
-If you edit or add icons, just refresh the page to get the latest.
-
-
-## A Note About Icon Fonts
-
-This script uses gulp-iconfont for testing, but we found the output wasn’t
-always production ready. We use the full exported SVGs and import to
-[Icomoon](https://icomoon.io/app). It could have been the way they were drawn.
-Your mileage may vary.
